@@ -46,7 +46,7 @@ I have made many comments in every script and writing this read me. Most of the 
 I have used the git plugin with godot, but it had it's problems. In case github and git would fail at any time I had a copy of every different time I worked on the project. There where even one time one of the files got corrupted (Thank god that I had just commited and pushed to github!).
 ## [05] Databases
 So I tried to find out how I connected a database to my godot project, but I found out that I would need to rebuild the whole engine. I tried making my own database system that had the simple CREATE, DELETE and UPDATE functions, but I found out that would be a whole new project in itself.
-I opted with a simple .json saving system.
+I opted with a simple .json saving system. If I ever get the chance to implement databases, I would've added a leaderboard with names and their score,
 UPDATE: I found a database that might work, but it is too late to do it now. I might check it out later. [LiteDB](http://www.litedb.org/)
 ## [06] Information Security
 I did not find that many instances where I could use information security. I guess you could call .gitignore security (Confidential in the **C** IA). I also think that godot trashes pretty much any unused variables (I cannot fint any valid sources on this). I could not find anything that strengtend the integrity (C **I** A). And my game is pretty accessible (CI **A**)
