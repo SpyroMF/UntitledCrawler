@@ -23,7 +23,7 @@ Godot uses a language called gdscript or gd, which is similar to python in many 
 
 # Assessment
 ## [01] Development
-I have developed a working game (That does not look very beutifull) and i have written in gdscript.
+I have developed a working game (That does not look very beutifull) and i have written the code in gdscript.
 There are [one of the scripts](https://github.com/SpyroMF/UntitledCrawler/blob/master/worlds/castle/door/door.gd) which have really good structure (i belive).
 Here is a snippet of the start:
 ```
