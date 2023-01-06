@@ -5,6 +5,12 @@ Godot uses a language called gdscript or gd, which is similar to python in many 
 ## The game
 The game belongs to the linear dungeon crawler genre. In other words, it is an exploration game with many rooms and enemies.
 This game is a random generation game, the enemies are randomly spawned for every room (There is a preset system).
+### Controls
+Movement: W, A, S, D
+Shoot: Space
+Aim: Mouse
+### Enemies
+There are currently one type of enemy, but the enemy does vary in speed, size and health.
 ## Installation
 Check [releases](https://github.com/SpyroMF/UntitledCrawler/releases).
 ## Building the game
