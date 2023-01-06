@@ -37,7 +37,7 @@ onready var door_up_hitbox    = $DoorUp/HB/CS
 onready var door_down_hitbox  = $DoorDown/HB/CS
 ```
 ## [02] System Development
-I have made good use of breaking big tasks into smaller ones. This have released a lot of stress since I started this current project about only a week ago.
+I have made good use of breaking big tasks into smaller ones (computational thinking). This have released a lot of stress since I started this current project about only a week ago.
 Since I didn't have much time; instead of making many enemies I only made one, that have many properties like speed, healt and size. That way i could make a little bossbattle when the player entered room 10 by just making the enemy bigger, have more health and move slower.
 I would also say that i used something between the agile and waterfall workflows. I showed off what i had made to get some feedback, and took some suggestions into considiration.
 ## [03] Documentation
@@ -49,9 +49,11 @@ So I tried to find out how i connected a database to my godot project, but i fou
 I opted with a simple .json saving system.
 UPDATE: I found a database that might work, but it is too late to do it now. I might check it out later. [LiteDB](http://www.litedb.org/)
 ## [06] Information Security
-I did not find that many instances where i could use information security. I guess you could call .gitignore security (Confidential in the **C** IA). I also think godot trashes pretty much any unused variables. I could not find anything that strengtend the integrity (C **I** A). And my game is pretty accessible (CI **A**)
+I did not find that many instances where i could use information security. I guess you could call .gitignore security (Confidential in the **C** IA). I also think that godot trashes pretty much any unused variables (I cannot fint any valid sources on this). I could not find anything that strengtend the integrity (C **I** A). And my game is pretty accessible (CI **A**)
+To increase the security of confidential information i could encrypt the code when building the project.
 ## [07] Secure Coding
 I had have some measures against errors. Specially when [loading a savefile](https://github.com/SpyroMF/UntitledCrawler/blob/master/game.gd).
+I if i had more secure coding I would encrypt the variables, maybe i would set up a highscore server using steam's account manager. Better error handling from the user's perspective, somthing like error messages.
 ## [08] Testing and Debugging
 I had many errors, and they where more often than not very hard to fix, I used print() all the time to find out what i was doing wrong. (gdscripts error outputs are not that great)
 
