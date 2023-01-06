@@ -53,7 +53,7 @@ I did not find that many instances where I could use information security. I gue
 To increase the security of confidential information I could encrypt the code when building the project.
 ## [07] Secure Coding
 I had have some measures against errors. Specially when [loading a savefile](https://github.com/SpyroMF/UntitledCrawler/blob/master/game.gd).
-I if I had more secure coding I would encrypt the variables, maybe I would set up a highscore server using steam's account manager. Better error handling from the user's perspective, somthing like error messages.
+If I had more secure coding implemented; I would encrypt the variables, maybe I would set up a highscore server using steam's account manager. Better error handling from the user's perspective, somthing like error messages.
 ## [08] Testing and Debugging
 I had many errors, and they where more often than not very hard to fix, I used print() all the time to find out what I was doing wrong. (gdscripts error outputs are not that great)
 
