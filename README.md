@@ -8,11 +8,12 @@ This game is a random generation game, the enemies are randomly spawned for ever
 ## Installation
 Check [releases](https://github.com/SpyroMF/UntitledCrawler/releases).
 ## Building the game
-1. Install [Godot 3.5.1](https://godotengine.org/article/maintenance-release-godot-3-5-1).
-2. Download this repository.
-3. Open the project.godot file with the godot program or import it from godot.
-4. Click Project > Export
-5. Export with the desired settings
+1. Install [Godot 3.5.1](https://godotengine.org/article/maintenance-release-godot-3-5-1)
+2. Download this repository
+3. Add the IMPACT.TFF from C:\Windows\fonts\ (Need to have windows) to the top folder where the project.godot file is
+4. Open the project.godot file with the godot program or import it from godot.
+5. Click Project > Export
+6. Export with the desired settings
 
 # Assessment
 ## [01] Development
