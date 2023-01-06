@@ -1,0 +1,149 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://menus/death.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "start"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ovelay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9, 3 ),
+"transitions": PoolRealArray( 1, 10.1965, 1 ),
+"update": 0,
+"values": [ Color( 0.478431, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ovelay:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://IMPACT.TTF"
+
+[sub_resource type="DynamicFont" id=3]
+size = 127
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://IMPACT.TTF"
+
+[sub_resource type="DynamicFont" id=5]
+size = 41
+font_data = SubResource( 4 )
+
+[node name="death_screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "start"
+anims/start = SubResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="none" type="Control" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 60.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.16
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 64.0
+margin_right = 1024.0
+margin_bottom = 220.0
+custom_fonts/font = SubResource( 3 )
+text = "You Died"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 224.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="none" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_right = 280.0
+margin_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.16
+
+[node name="buttons" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 284.0
+margin_right = 739.0
+margin_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.26
+
+[node name="none" type="Control" parent="VBoxContainer/HBoxContainer/buttons"]
+margin_right = 455.0
+margin_bottom = 125.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.16
+
+[node name="play again" type="Button" parent="VBoxContainer/HBoxContainer/buttons"]
+margin_top = 129.0
+margin_right = 455.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 5 )
+text = "Play again"
+
+[node name="quit" type="Button" parent="VBoxContainer/HBoxContainer/buttons"]
+margin_top = 190.0
+margin_right = 455.0
+margin_bottom = 247.0
+custom_fonts/font = SubResource( 5 )
+text = "Quit"
+
+[node name="none2" type="Control" parent="VBoxContainer/HBoxContainer/buttons"]
+margin_top = 251.0
+margin_right = 455.0
+margin_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.16
+
+[node name="none2" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 743.0
+margin_right = 1024.0
+margin_bottom = 376.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.16
+
+[node name="ovelay" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/buttons/play again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/buttons/quit" to="." method="_on_quit_pressed"]

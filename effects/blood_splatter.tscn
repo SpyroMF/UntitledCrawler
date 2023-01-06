@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://effects/blood_splatter.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.393293, 0.713415, 1 )
+colors = PoolColorArray( 0.231934, 0.231934, 0.231934, 1, 1, 1, 1, 1, 0.679501, 0.679501, 0.679501, 1, 0.392578, 0.392578, 0.392578, 1 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0.273864 ), 0.0, 31.9091, 0, 0, Vector2( 1, 0 ), -4.68665, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 102.84
+initial_velocity_random = 0.63
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 73.94
+scale_random = 0.1
+scale_curve = SubResource( 3 )
+color = Color( 0.670588, 0.192157, 0.192157, 1 )
+color_ramp = SubResource( 5 )
+hue_variation_random = 0.09
+
+[node name="blood_splatter" type="Particles2D"]
+emitting = false
+amount = 181
+lifetime = 0.49
+one_shot = true
+explosiveness = 0.73
+randomness = 0.29
+process_material = SubResource( 1 )
+script = ExtResource( 1 )

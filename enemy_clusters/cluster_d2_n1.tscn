@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://enemies/enemy1/enemy1.tscn" type="PackedScene" id=1]
+
+[node name="cluster4" type="Node2D"]
+
+[node name="enemy1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1, -40 )
+speed = 10
+health = 20
+size = 2
