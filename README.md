@@ -38,37 +38,37 @@ onready var door_down_hitbox  = $DoorDown/HB/CS
 ```
 ## [02] System Development
 I have made good use of breaking big tasks into smaller ones (computational thinking). This have released a lot of stress since I started this current project about only a week ago.
-Since I didn't have much time; instead of making many enemies I only made one, that have many properties like speed, healt and size. That way i could make a little bossbattle when the player entered room 10 by just making the enemy bigger, have more health and move slower.
+Since I didn't have much time; instead of making many enemies I only made one, that have many properties like speed, healt and size. That way I could make a little bossbattle when the player entered room 10 by just making the enemy bigger, have more health and move slower.
 I would also say that i used something between the agile and waterfall workflows. I showed off what i had made to get some feedback, and took some suggestions into considiration.
 ## [03] Documentation
-I have made many comments in every script and writing this read me. Most of the helpfull comments are in the [player.gd](https://github.com/SpyroMF/UntitledCrawler/blob/master/player/player.gd) script. Here i explain different kind of confusing functions and such wich are not in python.
+I have made many comments in every script and writing this read me. Most of the helpfull comments are in the [player.gd](https://github.com/SpyroMF/UntitledCrawler/blob/master/player/player.gd) script. Here I explain different kind of confusing functions and such wich are not in python.
 ## [04] Version Managment
-I have used the git plugin with godot, but it had it's problems. In case github and git would fail at any time i had a copy of every different time i worked on the project. There where even one time one of the files got corrupted (Thank god that i had just commited and pushed to github!).
+I have used the git plugin with godot, but it had it's problems. In case github and git would fail at any time I had a copy of every different time I worked on the project. There where even one time one of the files got corrupted (Thank god that I had just commited and pushed to github!).
 ## [05] Databases
-So I tried to find out how i connected a database to my godot project, but i found out that i would need to rebuild the whole engine. I tried making my own database system that had the simple CREATE, DELETE and UPDATE functions, but i found out that would be a whole new project in itself.
+So I tried to find out how I connected a database to my godot project, but I found out that I would need to rebuild the whole engine. I tried making my own database system that had the simple CREATE, DELETE and UPDATE functions, but I found out that would be a whole new project in itself.
 I opted with a simple .json saving system.
 UPDATE: I found a database that might work, but it is too late to do it now. I might check it out later. [LiteDB](http://www.litedb.org/)
 ## [06] Information Security
-I did not find that many instances where i could use information security. I guess you could call .gitignore security (Confidential in the **C** IA). I also think that godot trashes pretty much any unused variables (I cannot fint any valid sources on this). I could not find anything that strengtend the integrity (C **I** A). And my game is pretty accessible (CI **A**)
-To increase the security of confidential information i could encrypt the code when building the project.
+I did not find that many instances where I could use information security. I guess you could call .gitignore security (Confidential in the **C** IA). I also think that godot trashes pretty much any unused variables (I cannot fint any valid sources on this). I could not find anything that strengtend the integrity (C **I** A). And my game is pretty accessible (CI **A**)
+To increase the security of confidential information I could encrypt the code when building the project.
 ## [07] Secure Coding
 I had have some measures against errors. Specially when [loading a savefile](https://github.com/SpyroMF/UntitledCrawler/blob/master/game.gd).
-I if i had more secure coding I would encrypt the variables, maybe i would set up a highscore server using steam's account manager. Better error handling from the user's perspective, somthing like error messages.
+I if I had more secure coding I would encrypt the variables, maybe I would set up a highscore server using steam's account manager. Better error handling from the user's perspective, somthing like error messages.
 ## [08] Testing and Debugging
-I had many errors, and they where more often than not very hard to fix, I used print() all the time to find out what i was doing wrong. (gdscripts error outputs are not that great)
+I had many errors, and they where more often than not very hard to fix, I used print() all the time to find out what I was doing wrong. (gdscripts error outputs are not that great)
 
 # What went wrong?
 ### MiSO (Minecraft server manager)
-I probably used around a 100 hours on this project. It could easily implement most of the Assessments. I finally was done with the UI, then I found out godot can't run .jar files like batch. But i didn't give up yet, I tried to make one with Python's CLI! Then i gave up... (I wanted a visual application, that would actually be usefull)
+I probably used around a 100 hours on this project. It could easily implement most of the Assessments. I finally was done with the UI, then I found out godot can't run .jar files like batch. But I didn't give up yet, I tried to make one with Python's CLI! Then i gave up... (I wanted a visual application, that would actually be usefull)
 ### Discord Bot
 I wanted to make a discord bot, I started. I lost motivation.
 ### Flappy Bird 2
 I worked pretty hard on this game, it was almost finished. And I lost motivation again...
 ### UntitledSpaceGame
-I wanted to make a 3D game, godot's 3D renderer isnt the best. And i lost motivation even again...
+I wanted to make a 3D game, godot's 3D renderer is not the best. And I lost motivation even again...
 ### UntitledCrawler
-I was seeing a pattern, and tried to take a christmas break, and here I am now with the biggest project i have worked on... It is sertenly not near somthing i would call a product, but closer to a tech demo.
+I was seeing a pattern, and tried to take a christmas break, and here I am now with the biggest project i have worked on... It is sertenly not near somthing I would call a product, but closer to a tech demo.
 There where still problems with this project, the door system was not working properly so I ended up throwing away the idea and made 2 doors instead of 4 doors. I could not find a way of implementing databases
 
-### What i take with me to the next time
+### What I take with me to the next project
 This was a good way of learning that easier projects might be less impressive, but can also turn out to be a "good" product (it is definatly not a product yet). I need to really find something that motivates me, and make a good plan to follow.
