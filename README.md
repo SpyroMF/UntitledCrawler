@@ -1,7 +1,4 @@
 # UntitledCrawler
-## Game Engine
-I used the engine called [Godot 3.5.1](https://godotengine.org/article/maintenance-release-godot-3-5-1). It is primearly made for 2D game/app development.
-Godot uses a language called gdscript or gd, which is similar to python in many ways. Godot uses a node based child/parent system which is pretty easy to get used to.
 ## The game
 The game belongs to the linear dungeon crawler genre. In other words, it is an exploration game with many rooms and enemies.
 This game is a random generation game, the enemies are randomly spawned for every room (There is a preset system).
@@ -20,6 +17,9 @@ Check [releases](https://github.com/SpyroMF/UntitledCrawler/releases).
 4. Open the project.godot file with the godot program or import it from godot.
 5. Click Project > Export
 6. Export with the desired settings
+## Game Engine
+I used the engine called [Godot 3.5.1](https://godotengine.org/article/maintenance-release-godot-3-5-1). It is primearly made for 2D game/app development.
+Godot uses a language called gdscript or gd, which is similar to python in many ways. Godot uses a node based child/parent system which is pretty easy to get used to.
 
 # Assessment
 ## [01] Development
