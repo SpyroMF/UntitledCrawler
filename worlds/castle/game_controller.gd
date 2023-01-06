@@ -100,7 +100,8 @@ func spawn_enemy_cluster(difficulty: int):
 
 # This function only puts a door that is not locked in the "up" position.
 # One negative with this method is that because it adds a point for each level
-# the player gets one free point.
+# the player gets one free point. But i am thinking of adding another score system
+# if i continue with this project.
 func start():
 	locked_doors(false, false, true, false) # False = locked
 	visible_doors(false, false, true, false)
@@ -116,19 +117,27 @@ func get_difficulty(score):
 	
 
 
+
+# new_room()'s job is to make doors, and keep track of the score and highscore
 var current_door
 func new_room():
 	score += 1
 	
+	# If the score is bigger than the highscore it will make the highscore equal to
+	# the score and save it.
 	if score > Game.player["highscore"]:
 		Game.player["highscore"] = score
 		Game.save_data()
+	
 	print("Highscore: ", Game.player["highscore"])
 	print(score)
 	in_starter_room = false
 	print("Making a new room...")
 	randomize()
 	
+	# Inverts door position
+	# Example: if the door was supposed to spawn upwards, 
+	# it would make the door be spawned downward
 	door_went_through = invert_door_position(door_went_through)
 	
 	
@@ -136,10 +145,13 @@ func new_room():
 	locked_doors(false, false, false, false) # False = locked
 	spawn_enemy_cluster(get_difficulty(score))
 
+# Unlocks the top door.
 func unlock_door():
 	locked_doors(false, false, true, false) # False = locked
 
-
+# These functions are connected to the door hitboxes and trigger when
+# the player hits them. This is really efficient and makes it easy to
+# control door functions.
 func _on_door_left_door_entered():
 	door_went_through = 0
 	player.position.x -= 280
@@ -162,11 +174,11 @@ func _on_door_down_door_entered():
 
 
 
-func _ready(): # Runs when everything is loaded
-	Game.load_data()
-	start()
-	#print(up_door_visible, up_door_locked)
+func _ready(): # Runs when the scene is loaded
+	Game.load_data() #loads all the important save data
+	start() # places the starter-room
 
-func _process(delta):
+func _process(delta): # Runs every frame. See player/player.gd to read more about this function.
+	# Here i make sure the upward door stays closed until all the enemies are killed
 	if $enemies.get_child_count() == 0:
 		unlock_door()
